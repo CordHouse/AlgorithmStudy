@@ -47,7 +47,9 @@ public class Main {
         visit[start] = true;
         for(int v : node[start]) {
             if(!visit[v]) {
+                visit[v] = true;
                 dfs(depth+1, v);
+                visit[v] = false;
             }
         }
         visit[start] = false;
