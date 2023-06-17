@@ -31,9 +31,10 @@ public class Main {
 
         visit = new boolean[n];
         for(int i = 0; i < n; i++) {
-            if(answer == 0) {
-                dfs(1, i);
+            if(answer == 1) {
+                break;
             }
+            dfs(1, i);
         }
         System.out.println(answer);
     }
