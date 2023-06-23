@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     private static int answer = 0;
-    private static final int SIZE = 100_000_001;
+    private static final int SIZE = 10_000_001;
     private static boolean[] prime = new boolean[SIZE];
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
