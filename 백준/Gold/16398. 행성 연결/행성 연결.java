@@ -27,26 +27,26 @@ public class Main {
         while(!queue.isEmpty()) {
             Node node = queue.poll();
 
-            if(find(node.s) != find(node.e)) {
+            int start = find(node.s);
+            int end = find(node.e);
+
+            if(start != end) {
                 answer += node.v;
-                union(node.s, node.e);
+                union(start, end);
             }
         }
         System.out.println(answer);
     }
     public static void union(int start, int end) {
-        int startParent = find(start);
-        int endParent = find(end);
-
-        if(startParent == endParent) {
+        if(start == end) {
             return;
         }
 
-        if(startParent < endParent) {
-            parent[endParent] = startParent;
+        if(start < end) {
+            parent[end] = start;
         }
         else {
-            parent[startParent] = endParent;
+            parent[start] = end;
         }
     }
 
