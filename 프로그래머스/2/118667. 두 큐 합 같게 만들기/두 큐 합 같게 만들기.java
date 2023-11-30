@@ -33,7 +33,6 @@ class Solution {
                 s2 += mixQueue[left % mixQueue.length];
                 left++;
             }
-            if(left % mixQueue.length == 0 && right % mixQueue.length == queue1.length - 1) return -1;
             if(left > mixQueue.length && right > mixQueue.length) return -1;
             
             answer++;
