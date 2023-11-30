@@ -18,7 +18,6 @@ class Solution {
         int left = 0, right = queue1.length - 1;
         long s1 = sum(queue1);
         long s2 = sum(queue2);
-        long save = s1;
         while(s1 != s2) {
             if(s1 == 0 || s2 == 0) {
                 return -1;
