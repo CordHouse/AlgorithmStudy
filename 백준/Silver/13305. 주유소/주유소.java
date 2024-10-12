@@ -14,9 +14,9 @@ public class Main {
             cost[i] = Math.min(cost[i], cost[i-1]);
         }
 
-        int answer = 0;
+        long answer = 0;
         for(int i = 0; i < w.length; i++) {
-            answer += w[i] * cost[i];
+            answer += (long) w[i] * cost[i];
         }
         
         System.out.println(answer);
